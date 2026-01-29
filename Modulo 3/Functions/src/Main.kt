@@ -1,13 +1,22 @@
 // Yuri Germán García López - 252583
-fun main() {
-    val name = "Kotlin"
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    println("Hello, " + name + "!")
+import java.util.Calendar
 
-    for (i in 1..5) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        println("i = $i")
-    }
+fun main() {
+    println("Hello World!")
+    dayOfWeek()
+}
+
+fun dayOfWeek() {
+    println("What day is it today?")
+    val day = Calendar.getInstance().get(Calendar.DAY_OF_WEEK)
+    println( when (day) {
+        1 -> "Sunday"
+        2 -> "Monday"
+        3 -> "Tuesday"
+        4 -> "Wednesday"
+        5 -> "Thursday"
+        6 -> "Friday"
+        7 -> "Saturday"
+        else -> "Time has stopped"
+    })
 }
