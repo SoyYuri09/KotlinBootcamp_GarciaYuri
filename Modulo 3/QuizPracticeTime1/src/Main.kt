@@ -1,3 +1,4 @@
+//Yuri Germán García López - 252583
 fun main() {
     val fortune = getFortuneCookie()
     println("Your fortune is: $fortune")
