@@ -47,6 +47,17 @@ fun main() {
 
     // Preparar la especia
     curry.prepareSpice()
+
+    //--Ejercicio 5--
+    val spiceCabinet = listOf(
+        SpiceContainer(Curry("Yellow Curry", "mild")),
+        SpiceContainer(Curry("Red Curry", "medium")),
+        SpiceContainer(Curry("Green Curry", "spicy"))
+    )
+
+    spiceCabinet.forEach {
+        println(it.label)
+    }
 }
 
 //fun makeSalt(): Spice {
