@@ -2,6 +2,9 @@
 //Clase Main para probar los ejercicios del módulo 5
 import Buildings.Building
 import Buildings.Wood
+import Buildings.Brick
+import Buildings.isSmallBuilding
+
 fun main(args: Array<String>) {
     //--Ejercicio 1--
     //Crear instancia de la clase libro
@@ -42,4 +45,13 @@ fun main(args: Array<String>) {
 
     //--Ejercicio 5--
     Building(Wood()).build()
+
+    //--Ejercicio 6--
+    val woodBuilding = Building(Wood())
+    woodBuilding.build()
+    isSmallBuilding(woodBuilding)
+
+    val brickBuilding = Building(Brick())
+    brickBuilding.build()
+    isSmallBuilding(brickBuilding)
 }

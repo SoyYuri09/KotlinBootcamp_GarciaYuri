@@ -14,3 +14,10 @@ class Building<T : BaseBuildingMaterial>(val buildingMaterial: T) {
         println("$actualMaterialsNeeded ${buildingMaterial::class.simpleName} required")
     }
 }
+
+fun <T : BaseBuildingMaterial> isSmallBuilding(building: Building<T>) {
+    if (building.actualMaterialsNeeded < 500)
+        println("Small building")
+    else
+        println("large building")
+}
