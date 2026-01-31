@@ -3,7 +3,7 @@
 fun main(args: Array<String>) {
     //--Ejercicio 1--
     //Crear instancia de la clase libro
-    val book = Book("Ready Player One", "Ernest Cline", 2011)
+    val book = Book("Ready Player One", "Ernest Cline", 2011, 560)
     val bookTituloAutor = book.getTituloAutor()
     val bookTituloAutorAnio = book.getTituloAutorAnio()
 
@@ -23,7 +23,18 @@ fun main(args: Array<String>) {
     moreBooks.getOrPut("Hamlet") { "Shakespeare" }
     println(moreBooks)
 
-    //--Ejercicio 3 --
+    //--Ejercicio 3--
     println("Can borrow more books? ${book.canBorrow(5)}")
     book.printUrl()
+
+    //--Ejercicio 4--
+    val puppy = Puppy()
+    val book2 = Book("Oliver Twist", "Charles Dickens", 1837, 540)
+
+    while (book2.pages > 0) {
+        puppy.playWithBook(book2)
+        println("${book2.pages} left in ${book2.Titulo}")
+    }
+
+    println("Sad puppy, no more pages in ${book2.Titulo}.")
 }

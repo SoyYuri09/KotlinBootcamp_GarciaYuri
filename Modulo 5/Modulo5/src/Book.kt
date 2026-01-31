@@ -4,7 +4,7 @@
 //Constante que almacena el número máximo de libros que una persona puede tomar prestados
 const val MAX_NUMBER_BOOKS = 20
 
-class Book(val Titulo: String, val Autor: String, val Anio: Int) {
+class Book(val Titulo: String, val Autor: String, val Anio: Int, var pages: Int) {
 
     companion object {
         val BASE_URL = "http://www.turtlecare.net/"
@@ -29,3 +29,10 @@ class Book(val Titulo: String, val Autor: String, val Anio: Int) {
         println(Constants.BASE_URL + Titulo + ".html")
     }
 }
+
+fun Book.weight(): Double {
+    return pages * 1.5
+}
+
+fun Book.tornPages(torn: Int) =
+    if (pages >= torn) pages -= torn else pages = 0
