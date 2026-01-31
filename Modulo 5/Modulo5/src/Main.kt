@@ -1,5 +1,7 @@
 //Yuri Germán García López - 252583
 //Clase Main para probar los ejercicios del módulo 5
+import Buildings.Building
+import Buildings.Wood
 fun main(args: Array<String>) {
     //--Ejercicio 1--
     //Crear instancia de la clase libro
@@ -37,4 +39,7 @@ fun main(args: Array<String>) {
     }
 
     println("Sad puppy, no more pages in ${book2.Titulo}.")
+
+    //--Ejercicio 5--
+    Building(Wood()).build()
 }
