@@ -28,4 +28,10 @@ fun main() {
             it.rem(3)
         }
     )
+
+    //--Ejercicio 3--
+    while (true) {
+        print("Enter a direction: n/s/e/w: ")
+        game.makeMove(readLine())
+    }
 }

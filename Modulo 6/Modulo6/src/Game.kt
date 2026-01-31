@@ -15,6 +15,20 @@ class Game {
         path.clear()
         false
     }
+
+    // Recibe una lambda y la ejecuta
+    fun move(where: () -> Boolean) {
+        where.invoke()
+    }
+
+    // Decide qué movimiento hacer según el comando
+    fun makeMove(command: String?) {
+        if (command == "n") move(north)
+        else if (command == "s") move(south)
+        else if (command == "e") move(east)
+        else if (command == "w") move(west)
+        else move(end)
+    }
 }
 
 fun List<Int>.divisibleBy(block: (Int) -> Int): List<Int> {
