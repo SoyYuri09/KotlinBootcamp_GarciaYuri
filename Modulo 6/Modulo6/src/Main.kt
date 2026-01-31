@@ -21,5 +21,11 @@ fun main() {
     println(game.path)
 
     //--Ejercicio 2--
+    val numbers = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 0)
 
+    print(
+        numbers.divisibleBy {
+            it.rem(3)
+        }
+    )
 }
